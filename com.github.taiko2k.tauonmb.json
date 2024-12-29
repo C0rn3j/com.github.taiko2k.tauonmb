@@ -11,7 +11,7 @@
     "directory": "lib/ffmpeg",
     "add-ld-path": ".",
     "autodelete": false
-  }
+    }
   },
   "cleanup-commands": ["mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"],
   "finish-args":[
@@ -31,18 +31,15 @@
     "--talk-name=org.kde.StatusNotifierWatcher",
     "--own-name=org.mpris.MediaPlayer2.tauon"
   ],
-   "prepare-commands": [
-       "source /usr/lib/sdk/rust-stable/enable.sh"
-   ],
-   "modules":[
-     "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
-     "python-tekore-deps.json",
-     "python-dbus-deps.json",
-     "python3-modules.json",
-     "librespot.json",
-     {
-    "name": "foo"
-     },
+  "modules":[
+    "shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json",
+    "python-tekore-deps.json",
+    "python-dbus-deps.json",
+    "python3-modules.json",
+    "librespot.json",
+    {
+      "name": "foo"
+    },
       {
          "name": "libopenmpt",
          "config-opts": ["--without-portaudio", "--disable-examples" ],
